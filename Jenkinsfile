@@ -1,5 +1,5 @@
 pipeline {
-    agent { docker { image 'bryandollery/alpine-docker' } }
+    agent { docker { image 'bryandollery/aws-cli-alpine' } }
     stages {
         stage('build') {
             environment {
