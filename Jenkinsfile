@@ -7,7 +7,7 @@ pipeline {
     }
   }
   environment {
-    CREDS = credentials('reab-creds')
+    CREDS = credentials('creds-reab')
     AWS_ACCESS_KEY_ID = "$CREDS_USR"
     AWS_SECRET_ACCESS_KEY = "$CREDS_PSW"
     OWNER = 'reab'
@@ -20,4 +20,11 @@ pipeline {
       }
     }
   }
+
+  post {
+    success {
+      build  quietPeriod:0,wait:false, job:'terraform' 
+    }
+  }
+
 }
