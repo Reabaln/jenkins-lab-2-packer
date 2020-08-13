@@ -23,7 +23,7 @@ pipeline {
 
   post {
     success {
-      build  quietPeriod:0,wait:false, job:'terraform' 
+      build  quietPeriod:0,wait:false, job:'Reab-api-web-tf' 
     }
   }
 
