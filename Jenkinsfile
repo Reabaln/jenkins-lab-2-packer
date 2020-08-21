@@ -36,10 +36,5 @@ spec:
     }
   }
 
-  post {
-    success {
-      build  quietPeriod:0,wait:false, job:'reab-lab-2-tf' 
-    }
-  }
 
 }
